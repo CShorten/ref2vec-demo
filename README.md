@@ -1,2 +1,5 @@
 # ref2vec-demo
-Demo to show how to use ref2vec
+Weaviate Virtual Store!
+
+Run with:
+`uvicorn main:app --reload`
