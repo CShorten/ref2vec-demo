@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Page</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <script src="/static/js/controller.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <button class="basket-btn" id="basket1">Basket 1</button>
+                <button class="basket-btn" id="basket2">Basket 2</button>
+                <button class="basket-btn" id="basket3">Basket 3</button>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="search-bar" id="search-bar" placeholder="Search...">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <div class="image-grid">
+                    {% for image_key, image_path in image_dict.items() %}
+                      <div class="image-cell">
+                        <img src="{{ url_for('static', path=image_path) }}" id = "{{ image_path }}">
+                        <h2> {{ image_path }}</h2>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+    </body>
+</html>
